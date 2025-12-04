@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Existing custom styles (hero, cards, pattern, etc.) */
+.hero-gradient {
+  background: linear-gradient(135deg, #065f46 0%, #047857 50%, #10b981 100%);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.bamboo-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2310b981' fill-opacity='0.03'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Smooth scroll */
+.scroll-smooth { scroll-behavior: smooth; }
+
+/* Floating animation */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Sticky navbar bg on scroll */
+.nav-fixed {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* FAQ accordion content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.accordion-content.active {
+  max-height: 500px;
+}
+
+#imageModal {
+  display: none;
+}
+#imageModal.flex {
+  display: flex;
+}
+
+.text-justify {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+/*LOGO*/
+
+/* Logo alignment only */
+/* Logo – keep whatever size you use */
+.logo {
+  display: block;
+}
+
+/* Make title start exactly under current logo position */
+.footer-title {
+  display: block;
+  margin-top: 8px;       /* logo–text gap, need na change pannunga */
+  margin-left: 15px;     /* KEY: idha maathi alignment set pannunga */
+}
+
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;   /* one above another */
+  align-items: center;      /* center as a group */
+  gap: 8px;                 /* space between buttons */
+}
+
+.btn {
+  min-width: 220px;         /* same width for both */
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* green filled button */
+.btn-primary {
+  background-color: #16a34a;
+  color: #ffffff;
+  border: 2px solid #16a34a;
+}
+
+/* white button with green border */
+.btn-outline {
+  background-color: #ffffff;
+  color: #16a34a;
+  border: 2px solid #16a34a;
+}
